@@ -144,7 +144,7 @@ WHAT WE EXPECT FROM YOU:
 .plansHero{text-align:center;padding:5rem 0 4.5rem;line-height:1.21;}
 .plansHero__title{font-weight:700;font-size:2rem;margin:0 0 1rem 0;color:#000;}
 .plansHero__subtitle{margin:0;}
-.planItem{--border:1px solid #e6e6e6;--bgColor:#fff;--boxShadow:none;background-color:var(--bgColor);border:var(--border);border-radius:1rem;box-shadow:var(--boxShadow);padding:2rem 1.5rem;display:inline-flex;flex-direction:column;}
+.planItem{--border:1px solid #e6e6e6;--bgColor:#fff;--boxShadow:none;background-color:var(--bgColor);border:var(--border);border-radius:1rem;box-shadow:var(--boxShadow);padding:2rem 0.6rem;display:inline-flex;flex-direction:column;}
 .planItem__container{--direction:column;display:grid;grid-auto-flow:var(--direction);grid-auto-columns:1fr;gap:1.5rem;}
 .planItem .price{--priceMargin:2rem 0;}
 .planItem--pro{--border:0;--boxShadow:0px 14px 30px rgba(204, 204, 204, 0.32);}
