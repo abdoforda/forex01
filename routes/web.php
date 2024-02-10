@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+Route::get('/clear', function () {
+    Artisan::call('config:cache');
+    Artisan::call('cache:clear');
+    Artisan::call('view:clear');
+    return "done";
+});
+
+
 Route::get('/', function () {
     return view('index');
 });
