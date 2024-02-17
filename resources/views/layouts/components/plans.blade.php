@@ -15,8 +15,7 @@ WHAT WE EXPECT FROM YOU:
 <section class="plans__container">
     <div class="plans">
       <div class="plansHero">
-        <h1 class="plansHero__title">Simple, transparent pricing</h1>
-        <p class="plansHero__subtitle">No contracts. No suprise fees.</p>
+        <h2 class="plansHero__title">Our customers are the cornerstone of our business, and their satisfaction is our priority.</h2>
       </div>
       <div class="planItem__container">
         @php
@@ -116,7 +115,28 @@ WHAT WE EXPECT FROM YOU:
         <!--entp plan ends --> --}}
   
       </div>
+
+      
+      
+
     </div>
+    <div
+        class="container mt-5"
+      >
+        <div
+          class="row justify-content-center align-items-center g-4"
+        >
+          <div class="col">
+              <h3 class="text-center">Begin by following three simple steps</h3>
+              <ul class="mt-4 text-black ulliststyle">
+                <li>Provide your info: Share your information.</li>
+                <li>Fund your account: Make a deposit via bank transfer, wire transfer, or direct bank payment.</li>
+                <li>Start trading: Upon approval, the account will become accessible.</li>
+              </ul>
+          </div>
+        </div>
+        
+      </div>
   </section>
 
   <style>
