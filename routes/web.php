@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,8 +28,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
+Route::get('page/{slug}', [SiteController::class, 'page'])->name('page');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
