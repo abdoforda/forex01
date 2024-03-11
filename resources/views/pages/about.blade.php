@@ -21,10 +21,10 @@
                     <h2>Our Mission:</h2>
                     <p class="mb-1">Driven by our dedication to integrity and client satisfaction, our mission is to:</p>
                     <ul class="m-0">
-                        <li>- Provide a comprehensive suite of financial services catering to diverse investment needs.</li>
-                        <li>- Foster an environment of transparency, trust, and reliability.</li>
-                        <li>- Empower investors with innovative technology, expert insights, and educational resources.</li>
-                        <li>- Ensure a seamless trading experience through competitive commissions and tight spreads.</li>
+                        <li>Provide a comprehensive suite of financial services catering to diverse investment needs.</li>
+                        <li>Foster an environment of transparency, trust, and reliability.</li>
+                        <li>Empower investors with innovative technology, expert insights, and educational resources.</li>
+                        <li>Ensure a seamless trading experience through competitive commissions and tight spreads.</li>
                     </ul>
                     <p></p>
                 </div>
@@ -32,11 +32,11 @@
                     <h2>Core Values:</h2>
                     <p class="mb-1">Our core values serve as the foundation of Mercato Brokers:</p>
                     <ul class="m-0">
-                        <li>- Integrity: Upholding the highest ethical standards and transparency in all interactions.</li>
-                        <li>- Innovation: Embracing cutting-edge technology to redefine the financial experience for our clients.</li>
-                        <li>- Client-Centric Approach: Prioritizing our clients' needs and aspirations in every decision we make.</li>
-                        <li>- Expertise: Cultivating a team of seasoned professionals dedicated to guiding clients towards financial success.</li>
-                        <li>- Community Engagement: Contributing positively to the financial community through education, responsible trading practices, and ethical conduct.</li>
+                        <li>Integrity: Upholding the highest ethical standards and transparency in all interactions.</li>
+                        <li>Innovation: Embracing cutting-edge technology to redefine the financial experience for our clients.</li>
+                        <li>Client-Centric Approach: Prioritizing our clients' needs and aspirations in every decision we make.</li>
+                        <li>Expertise: Cultivating a team of seasoned professionals dedicated to guiding clients towards financial success.</li>
+                        <li>Community Engagement: Contributing positively to the financial community through education, responsible trading practices, and ethical conduct.</li>
                     </ul>
                     <p></p>
                 </div>

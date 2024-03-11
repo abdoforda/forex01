@@ -4227,3 +4227,19 @@ footer {
 .desc_page{
     font-size: 22px;
 }
+.list-style-right li{
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.list-style-right li::before{
+    width: 36px;
+    content: ' ';
+    background-image: url(../img/fi-rr-checkbox.png);
+    display: block;
+    height: 16px;
+    background-size: contain;
+    margin: 5px;
+    background-repeat: no-repeat;
+}
