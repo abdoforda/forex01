@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'About as')
+@section('title', $page->name)
 @section('description', $page->getTranslatedAttribute('meta_description', app()->getLocale()))
 @section('keywords', $page->getTranslatedAttribute('meta_keywords', app()->getLocale()))
 

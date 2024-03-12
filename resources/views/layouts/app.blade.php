@@ -47,16 +47,16 @@
                 <div data-loader="circle-side"></div>
             </div><!-- /Preload -->
             <div id="logo">
-                <a href="index.html"><img src="{{ asset('img/logo.png') }}" width="192" height="42"
+                <a href="/"><img src="{{ asset('img/logo.png') }}" width="192" height="42"
                         data-retina="true" alt=""></a>
             </div>
             <ul id="top_menu">
                 <li><a href="login.html" class="login">Login</a></li>
-                <li><a href="index.html#0" class="search-overlay-menu-btn">Search</a></li>
+                <li><a href="/0" class="search-overlay-menu-btn">Search</a></li>
                 <li class="hidden_tablet"><a href="services.html" class="btn_1 rounded">Start trading</a></li>
             </ul>
             <!-- /top_menu -->
-            <a href="index.html#menu" class="btn_mobile">
+            <a href="/menu" class="btn_mobile">
                 <div class="hamburger hamburger--spin" id="hamburger">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
@@ -70,36 +70,37 @@
                         $navs = App\Navbar::where('navbar_id', null)->orderBy('order', 'ASC')->get();
                     @endphp
                     @foreach ($navs as $index => $nav)
-                        @if ($nav->url != '')
-                            <li><span><a href="{{ $nav->url }}"
-                                        @if ($nav->target == 1) target="new" @endif>{{ $nav->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
-                            </li>
-                        @else
-                        @if ($nav->navs->count() > 0)
-                        <li><span><a
-                            href="/#{{ $index }}">{{ $nav->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
-                    <ul>
-                        @foreach ($nav->navs as $n)
-                            @if ($n->url != '')
-                                <li><span><a href="{{ $n->url }}"
-                                            @if ($n->target == 1) target="new" @endif>{{ $n->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
-                                </li>
-                            @else
-                            <li><span><a href="{{ route('page', $n->page->slug) }}"
-                                @if ($n->target == 1) target="new" @endif>{{ $n->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
-                            </li>
-                            @endif
-                            @endforeach
+                        <li><span><a 
 
-                    </ul>
-                </li>
-                        @else
-                        <li><span><a href="{{ route('page', $nav->page->slug) }}"
-                            @if ($nav->target == 1) target="new" @endif>{{ $nav->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
-                        </li>
-                        @endif
+                            @if ($nav->url != '')
+                                href="{{ $nav->url }}"
+                            @elseif ($nav->page)
+                                href="{{ route('page', $nav->page->slug) }}"
+                            @else
+                                href="/#{{ $index }}"
+                            @endif
+
                             
-                        @endif
+                                    
+                            @if ($nav->target == 1) target="new" @endif>{{ $nav->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
+
+                            @if ($nav->navs->count() > 0)
+                                <ul>
+                                    @foreach ($nav->navs as $n)
+                                        @if ($n->url != '')
+                                            <li><span><a href="{{ $n->url }}"
+                                                        @if ($n->target == 1) target="new" @endif>{{ $n->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
+                                            </li>
+                                        @else
+                                            <li><span><a href="{{ route('page', $n->page->slug) }}"
+                                                        @if ($n->target == 1) target="new" @endif>{{ $n->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
+                                            </li>
+                                        @endif
+                                    @endforeach
+
+                                </ul>
+                            @endif
+                        </li>
                     @endforeach
 
 
