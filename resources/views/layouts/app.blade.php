@@ -121,6 +121,8 @@
         @yield('content')
         <!-- /main -->
 
+        @include('layouts.components.need_help')
+
         <footer class="pb-4 bg-black">
             <div class="pt-3 pb-3 bg-footer1">
                 <div class="container text-capitalize">

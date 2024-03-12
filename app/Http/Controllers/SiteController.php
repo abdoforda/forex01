@@ -11,4 +11,7 @@ class SiteController extends Controller
         $page = Page::where('slug', $slug)->firstOrFail();
         return view('pages.page', compact('page'));
     }
+    public function contactUs(){
+        return "contactUs";
+    }
 }
