@@ -1060,9 +1060,11 @@ ul#additional_links li:after {
     position: relative;
     left: 10px
 }
-.main-menu{
+
+.main-menu {
     float: left;
 }
+
 #form_container {
     position: relative;
     background: url(../img/bg_home2.jpg) center top no-repeat fixed #ccc;
@@ -1078,12 +1080,16 @@ ul#additional_links li:after {
     height: 100%;
     padding: 130px 0
 }
-#form_container .wrapper2{
+
+#form_container .wrapper2 {
     padding: 40px 0;
     background-color: rgb(0 0 0 / 61%);
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
 }
+
 .intro_title_header {
     margin-top: 85px
 }
@@ -1136,9 +1142,11 @@ ul#additional_links li:after {
     font-size: 28px;
     font-size: 1.75rem
 }
- .intro_title_header .desc_page p {
+
+.intro_title_header .desc_page p {
     font-size: 22px;
 }
+
 @media (max-width:991px) {
     .intro_title_header p {
         font-size: 20px;
@@ -4229,16 +4237,18 @@ footer {
     list-style-type: decimal;
 }
 
-.desc_page{
+.desc_page {
     font-size: 22px;
 }
-.list-style-right li{
+
+.list-style-right li {
     display: flex;
     font-size: 18px;
     align-items: center;
     margin-bottom: 8px;
 }
-.list-style-right li::before{
+
+.list-style-right li::before {
     width: 36px;
     content: ' ';
     background-image: url(../img/fi-rr-checkbox.png);
@@ -4248,25 +4258,38 @@ footer {
     margin: 5px;
     background-repeat: no-repeat;
 }
-.table-align-middle tr td{
+
+.table-align-middle tr td {
     vertical-align: middle;
 }
-.list-style-inside{
+
+.list-style-inside {
     list-style: inside;
 }
+
 .rounded {
     border-radius: 0.8rem !important;
 }
-.overflow-hidden{
+
+.overflow-hidden {
     overflow: hidden;
 }
-.bg-primary{
+
+.bg-primary {
     background-color: var(--color-primary)
 }
-.color-primary{
+
+.color-primary {
     color: var(--color-primary)
 }
 
-.bg-gray{
+.btn-primary2 {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.bg-gray {
     background-color: #efefef;
 }
