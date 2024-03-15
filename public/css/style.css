@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
 @import url(menu_2.css);
 
+
+:root {
+    --color-primary: #e3b24c;
+}
+
 #hero_in .wrapper h1,
 .btn_full,
 .intro_title_header h3,
@@ -4245,4 +4250,23 @@ footer {
 }
 .table-align-middle tr td{
     vertical-align: middle;
+}
+.list-style-inside{
+    list-style: inside;
+}
+.rounded {
+    border-radius: 0.8rem !important;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.bg-primary{
+    background-color: var(--color-primary)
+}
+.color-primary{
+    color: var(--color-primary)
+}
+
+.bg-gray{
+    background-color: #efefef;
 }

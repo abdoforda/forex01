@@ -427,52 +427,55 @@
 
 
 
+    
 
-    <div class="container">
-        <div id="reccomended" class="owl-carousel owl-theme">
-            <div class="item">
-                <img src="img/currency_icon_1.svg" alt="">
-                <h5>Bitcoin</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_2.svg" alt="">
-                <h5>Ethereum</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_3.svg" alt="">
-                <h5>Monero</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_4.svg" alt="">
-                <h5>Ripple</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_5.svg" alt="">
-                <h5>Bytecoin</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_6.svg" alt="">
-                <h5>Zcash</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_7.svg" alt="">
-                <h5>Litecoin</h5>
-            </div>
-            <!-- /item -->
-            <div class="item">
-                <img src="img/currency_icon_8.svg" alt="">
-                <h5>Dash</h5>
-            </div>
-            <!-- /item -->
+<div class="container">
+    <div id="reccomended" class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_1.svg') }}" alt="">
+            <h5>Bitcoin</h5>
         </div>
-        <!-- /carousel -->
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_2.svg') }}" alt="">
+            <h5>Ethereum</h5>
+        </div>
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_3.svg') }}" alt="">
+            <h5>Monero</h5>
+        </div>
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_4.svg') }}" alt="">
+            <h5>Ripple</h5>
+        </div>
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_5.svg') }}" alt="">
+            <h5>Bytecoin</h5>
+        </div>
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_6.svg') }}" alt="">
+            <h5>Zcash</h5>
+        </div>
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_7.svg') }}" alt="">
+            <h5>Litecoin</h5>
+        </div>
+        <!-- /item -->
+        <div class="item">
+            <img src="{{ asset('img/currency_icon_8.svg') }}" alt="">
+            <h5>Dash</h5>
+        </div>
+        <!-- /item -->
     </div>
-    <!-- /container -->
+    <!-- /carousel -->
+</div>
+
+
+
 </main>
 @endsection

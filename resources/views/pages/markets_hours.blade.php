@@ -1,6 +1,7 @@
 <div class="container mt-5">
     <div class="row g-4">
-        <div class="col-md-12">
+        
+        {{-- <div class="col-md-12">
             <div class="table-responsive">
                 <table class="table table-primary">
                     <thead style="background-color: #d2a54e;
@@ -100,7 +101,7 @@
                 </table>
             </div>
 
-        </div>
+        </div> --}}
 
         <div class="col-md-12 mt-4">
             <h3 class="text-center">
