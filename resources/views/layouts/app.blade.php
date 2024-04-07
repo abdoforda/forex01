@@ -86,7 +86,7 @@
 
                             @if ($nav->navs->count() > 0)
                                 <ul>
-                                    @foreach ($nav->navs as $n)
+                                    @foreach ($nav->navs()->orderBy('order', 'ASC')->get() as $n)
                                         @if ($n->url != '')
                                             <li><span><a href="{{ $n->url }}"
                                                         @if ($n->target == 1) target="new" @endif>{{ $n->getTranslatedAttribute('name', app()->getLocale()) }}</a></span>
@@ -358,6 +358,9 @@
     <script src="{{ asset('js/common_scripts.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('assets/validate.js') }}"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    @yield('scripts')
 
 </body>
 

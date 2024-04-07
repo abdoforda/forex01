@@ -1,32 +1,25 @@
 <div class="container pt-5 pb-2">
-    <div class="row g-4 text-center">
-        <div class="col-md-12 mb-4">
-            <h3 class="h1 color-primary">
-                @lang('MT5 upgrades')
-            </h3>
-        </div>
-        <div class="col-md-3">
-            <h3>@lang('Faster electronic trading.')</h3>
-            <p>@lang('64-bit, multi-threaded platform for faster and more efficient trading than MT4.')</p>
-        </div>
-        <div class="col-md-3">
-            <h3>@lang('Simpler search function ')</h3>
-            <p>@lang('Type a market name, find it instantly, and avoid scrolling.')</p>
-        </div>
-        <div class="col-md-3">
-            <h3>@lang('Improved range of tools')</h3>
-            <p>@lang('Access 15 custom indicators, such as integrated Pivot Points, plus an array of advanced charting tools.')</p>
-        </div>
-        <div class="col-md-3">
-            <h3>@lang('Choose from nearly 300 stocks')</h3>
-            <p>@lang('Diversify your trading with a range of CFD stocks, previously unavailable in MT4.')</p>
-        </div>
-        <div class="col-md-12 mt-4">
-            <h3>@lang('Exclusive tools')</h3>
-            <p class="lead">@lang('Optimize your strategy with a suite of over 20 tools that give you professional-grade control and flexibility over your trading.')</p>
+    <div class="row g-4">
+        <div class="col-md-12">
+            <h3>@lang('Specifications'):</h3>
+            <ul class="list-style-inside ul01">
+                <li>@lang("Unleash your trading potential with MetaTrader 5's sophisticated order management system, providing you with unparalleled control over your trades. Dive into a world of data visualization with an extensive array of 38 built-in indicators and 21 diverse timeframes, empowering you to make informed decisions with confidence.")</li>
+                <li>@lang("Embrace the future of trading with MetaTrader 5's automated functionalities, allowing you to execute trades with precision and efficiency. Explore a vast marketplace offering a plethora of indicators and expert advisors, curated to enhance your trading strategies and maximize your profits.")</li>
+                <li>@lang("Stay ahead of market movements with MetaTrader 5's integrated economic calendar, ensuring you never miss a crucial event impacting your trades. Immerse yourself in real-time market news and analysis, seamlessly integrated into the platform for quick access to valuable insights.")</li>
+                <li>@lang("Experience ultimate trading flexibility with MetaTrader 5, available across desktop, web, iOS, and Android platforms, allowing you to trade anytime, anywhere. Join the ranks of successful traders who rely on MetaTrader 5's advanced features to navigate the financial markets with ease and precision.")</li>
+                </ul>
         </div>
     </div>
 </div>
+
+
+<style>
+.ul01 li{
+    margin-bottom: 10px;
+}
+</style>
+
+
 
 <div class="pt-5 pb-5 bg-gray">
     <div class="container">
