@@ -30,27 +30,27 @@
         <div class="container">
             <div class="row justify-content-center align-items-center g-2 h4y">
 
-                <div class="col-md-2">
+                <div class="col-6 col-lg-2">
                     <i class="pe-7s-wallet" style="font-size: 52px;"></i>
                     <h4>0</h4><span>Commission</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-6 col-lg-2">
                     <i class="pe-7s-arc" style="font-size: 52px;"></i>
                     <h4>0.4</h4><span>Pips From</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-6 col-lg-2">
                     <i class="pe-7s-diamond" style="font-size: 52px;"></i>
                     <h4>$500</h4><span>Min Deposit</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-6 col-lg-2">
                     <i class="pe-7s-hammer" style="font-size: 52px;"></i>
                     <h4>6+</h4><span>Funding Methods</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-6 col-lg-2">
                     <i class="pe-7s-hourglass" style="font-size: 52px;"></i>
                     <h4>1000+</h4><span>Tradable Instruments</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-6 col-lg-2">
                     <i class="pe-7s-plugin" style="font-size: 52px;"></i>
                     <h4>1:1000</h4><span>FX Leverage Up to</span>
                 </div>

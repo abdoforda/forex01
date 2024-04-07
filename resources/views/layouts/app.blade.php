@@ -56,7 +56,7 @@
                 <li class="hidden_tablet"><a href="services.html" class="btn_1 rounded">Start trading</a></li>
             </ul>
             <!-- /top_menu -->
-            <a href="/menu" class="btn_mobile">
+            <a href="javascript:void(0)" class="btn_mobile">
                 <div class="hamburger hamburger--spin" id="hamburger">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
