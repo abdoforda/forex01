@@ -188,14 +188,14 @@
             </p>
         </div>
         <div class="row how_home">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <figure>
                     <a href="https://vimeo.com/231518882" class="video"><i
                             class="arrow_triangle-right"></i><span>Play Video</span></a>
                     <img src="img/mobile.png" alt="" class="img-fluid">
                 </figure>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <ul>
                     <li><strong>1</strong>
                         <h4>Click on <a href="#">Try Demo</a></h4>
