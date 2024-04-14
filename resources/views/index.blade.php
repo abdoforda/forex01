@@ -188,7 +188,7 @@
             </p>
         </div>
         <div class="row how_home">
-            <div class="col-lg-6">
+            <div class="col-lg-6 p-4">
                 <figure>
                     <a href="https://vimeo.com/231518882" class="video"><i
                             class="arrow_triangle-right"></i><span>Play Video</span></a>
