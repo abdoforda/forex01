@@ -198,7 +198,7 @@
             <div class="col-lg-6">
                 <ul>
                     <li><strong>1</strong>
-                        <h4>Click on <a href="#">Try Demo</a></h4>
+                        <h4>Click on <a href="https://www.mercatobrokers.net/register/trader">Try Demo</a></h4>
                         <p>Fill our Demo account form!</p>
                     </li>
                     <li><strong>2</strong>
@@ -210,7 +210,7 @@
                         <p>Experience risk-free trading across over 1000+ products.</p>
                     </li>
                 </ul>
-                <p><a href="register.html" class="btn_1 rounded">Try Demo</a><br></p>
+                <p><a href="https://www.mercatobrokers.net/register/trader" class="btn_1 rounded">Try Demo</a><br></p>
                 <p>* With no obligations or hidden fees.</p>
             </div>
         </div>

@@ -34,16 +34,18 @@ WHAT WE EXPECT FROM YOU:
                 <div class="card__icon {{$class[$index]}}"></div>
                 <h2>{{ $p->name }}</h2>
               </div>
-              <div class="card__desc">
+              {{-- <div class="card__desc">
                 {{ $p->desc }}
-              </div>
+              </div> --}}
             </div>
     
-            <div class="price">
+            {{-- <div class="price">
               @if ($p->price != '')
               ${{ $p->price }}
               @endif
-              </div>
+              </div> --}}
+
+              <div style="height: 30px;"></div>
     
             <ul class="featureList">
                 @foreach ($p->infos as $i)

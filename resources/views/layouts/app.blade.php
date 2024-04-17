@@ -51,9 +51,9 @@
                         data-retina="true" alt=""></a>
             </div>
             <ul id="top_menu">
-                <li><a href="login.html" class="login">Login</a></li>
+                <li><a href="https://www.mercatobrokers.net/login" class="login">Login</a></li>
                 <li><a href="/0" class="search-overlay-menu-btn">Search</a></li>
-                <li class="hidden_tablet"><a href="services.html" class="btn_1 rounded">Start trading</a></li>
+                <li class="hidden_tablet"><a href="https://www.mercatobrokers.net/register/trader" class="btn_1 rounded">Start trading</a></li>
             </ul>
             <!-- /top_menu -->
             <a href="javascript:void(0)" class="btn_mobile">
@@ -229,7 +229,7 @@
                                     <div class="dis5"></div>
                                 </li>
                                 <li><a href="#register">Open Account</a></li>
-                                <li><a href="#register">Start Trading</a></li>
+                                <li><a href="https://www.mercatobrokers.net/register/trader">Start Trading</a></li>
                                 <li><a href="#/faq">Mercatobrokers&nbsp;FAQ</a></li>
 
 

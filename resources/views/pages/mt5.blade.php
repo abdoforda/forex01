@@ -82,9 +82,11 @@
                     <p>@lang("Choose from a selection of more than 950 trading robots and 2,000 technical indicators available in the largest trading marketplace globally.")</p>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-lg btn-primary2">
-                        Download
-                    </button>
+                    <a href="https://download.mql5.com/cdn/web/mercato.brokers.for/mt5/mercatobrokers5setup.exe">
+                        <button type="button" class="btn btn-lg btn-primary2">
+                            Download
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="col-md-6">
