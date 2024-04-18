@@ -429,7 +429,7 @@
 
     
 
-<div class="container">
+{{-- <div class="container">
     <div id="reccomended" class="owl-carousel owl-theme">
         <div class="item">
             <img src="{{ asset('img/currency_icon_1.svg') }}" alt="">
@@ -473,7 +473,7 @@
         <!-- /item -->
     </div>
     <!-- /carousel -->
-</div>
+</div> --}}
 
 
 

@@ -290,15 +290,16 @@
                                 <li>We hold a global business license under section 72 of the Financial Services Act
                                     2007 and an Investment Dealer (Full Service Dealer, excluding underwriting) License
                                     under section 29 of Securities Act 2003. License No: GB23201935</li>
-                                <li>The Registered and Physical Office address of the Company is: Credentia
-                                    International Management, The Cyberati Lounge, Ground Floor, The Catalyst, Silicon
-                                    Avenue, 40 Cybercity, 72201 Ebène, Republic of Mauritius.</li>
-                                <li>Phone: <a href="tel:+971 (04) 447 1292">+971 (04) 447 1292</a></li>
+                                <li>The Registered and Physical Office address of the Company is: Address: United Arab Emirates, Dubai, Shiekh Zayed Road, Nasima Tower, Office 306.
+
+                                    Iraq, Erbil, Dream City Main Street, Office 308.
+                              </li>
+                                <li>Phone: <a href="tel:+964 750 536 45 45">+964 750 536 45 45</a></li>
+                                <li>Telephone: <a href="tel:+964 770 537 45 45">+964 770 537 45 45</a></li>
                                 <li>Email: <a
-                                        href="mailto:info@demo.mercatobrokers.com">info@demo.mercatobrokers.com</a>
+                                        href="mailto:info@mercatobrokers.com">info@mercatobrokers.com</a>
                                 </li>
-                                <li>Our address in the UAE: Mercatobrokers Investment LLC, the Iridium building, Office
-                                    No 227.039 Umm-Suqeim St. Al Barsha- Dubai - UAE</li>
+                                
                             </ol>
                             <div class="titlemax mb-0">
                                 <strong>Risk Warning:</strong>
