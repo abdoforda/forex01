@@ -242,54 +242,11 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-12 pt-3 pb-0">
-                        <div class="row">
-                            <div
-                                class="col-sm-8 d-flex align-items-center img_in_footer text-center text-sm-start overflow-auto">
-
-                                <img class="m-2" src="{{ asset('img/icon-site.png') }}" height="26"
-                                    alt="metaquotes">
-                                <img class="m-2" src="{{ asset('img/trustpilot.png') }}" height="28"
-                                    alt="metaquotes">
-                            </div>
-                            <div class="col-sm-3 mt-sm-0 mt-4 text-center text-sm-start">
-                                <div class="social-icons">
-                                    <div class="img06">
-                                        <img src="{{ asset('img/ww.png') }}" class="img-fluid hvr-grow"
-                                            alt="">
-                                    </div>
-                                    <div class="img06">
-                                        <img src="{{ asset('img/d.png') }}" class="img-fluid hvr-grow"
-                                            alt="">
-                                    </div>
-                                    <div class="img06">
-                                        <img src="{{ asset('img/num3.png') }}" class="img-fluid hvr-grow"
-                                            alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hidden-xs hidden-sm">
                 <div class="small desk-footer">
                     <div class="widget-area col-xs-12 col-sm-12 col-md-12 col-lg-10">
                         <div id="block-10" class="widget hr widget_block small">
-                            <div class="titlemax mb-0">
-                                <strong>Incumbency Certificate</strong>
-                            </div>
-                            <p>
-                                We, Mercatobrokers Investment LLC, Credentia International Management, The Cyberati
-                                Lounge, Ground Floor, The Catalyst, Silicon Avenue, 40 Cybercity, 72201 Ebène, Republic
-                                of Mauritius hereby confirm that as at the date of this Certificate: <br>
-                            </p>
                             <ol style="list-style: disc">
-                                <p></p>
-                                <li>The Company is in good legal standing.</li>
-                                <li>We hold a global business license under section 72 of the Financial Services Act
-                                    2007 and an Investment Dealer (Full Service Dealer, excluding underwriting) License
-                                    under section 29 of Securities Act 2003. License No: GB23201935</li>
+                                <p class="mt-3"></p>
                                 <li>The Registered and Physical Office address of the Company is: Address: United Arab Emirates, Dubai, Shiekh Zayed Road, Nasima Tower, Office 306.
 
                                     Iraq, Erbil, Dream City Main Street, Office 308.
