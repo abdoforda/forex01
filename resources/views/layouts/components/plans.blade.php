@@ -20,7 +20,7 @@ WHAT WE EXPECT FROM YOU:
       <div class="planItem__container">
         @php
             $plans = App\Plan::all();
-            $icons = ['planItem--free','planItem--pro','planItem--pro','planItem--entp'];
+            $icons = ['planItem--free','','planItem--pro','planItem--entp'];
             $class = ['symbol symbol--rounded','symbol','symbol',''];
             $btn = ['','button--pink','button--pink','button--white'];
         @endphp
@@ -31,7 +31,12 @@ WHAT WE EXPECT FROM YOU:
   
             <div class="card">
               <div class="card__header">
+                @if ($icons[$index] == '')
+                  <img src="{{ asset('img/triangle.png') }}" width="42px" />
+                @else
                 <div class="card__icon {{$class[$index]}}"></div>
+                @endif
+                
                 <h2>{{ $p->name }}</h2>
               </div>
               {{-- <div class="card__desc">
@@ -60,7 +65,9 @@ WHAT WE EXPECT FROM YOU:
               
             </ul>
     
-            <button class="button {{$btn[$index]}}">Get Started</button>
+            <a href="/page/try-demo">
+              <button class="button {{$btn[$index]}}">Get Started</button>
+            </a>
           </div>
         @endforeach
 

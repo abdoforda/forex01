@@ -12,7 +12,7 @@
                         border-color: #08243c05;
                         font-size: 26px;
                         cursor: pointer;">
-                        24/7 Support
+                        24/5 Support
                     </button>
                 </center>
             </div>
@@ -20,4 +20,14 @@
 
     </div>
 
+</section>
+
+<section style="padding: 24px;
+background: #e3b24c;">
+    <div class="container">
+        <center>
+            <h2 class="text-white">Start trading Now</h2>
+            <a href="/page/try-demo" class="btn-out01" >Demo Account</a>
+        </center>
+    </div>
 </section>

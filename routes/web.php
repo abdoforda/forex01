@@ -30,6 +30,7 @@ Route::get('/', function () {
 
 Route::get('page/{slug}', [SiteController::class, 'page'])->name('page');
 Route::get('contact-us', [SiteController::class, 'contactUs'])->name('contactUs');
+Route::post('demo_account', [SiteController::class, 'demo_account'])->name('demo_account');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

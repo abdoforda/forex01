@@ -14,4 +14,17 @@ class SiteController extends Controller
     public function contactUs(){
         return "contactUs";
     }
+
+    //demo_account
+    public function demo_account(Request $request){
+        
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
+        
+        return 'ok';
+    }
+
 }

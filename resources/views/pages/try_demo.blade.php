@@ -30,6 +30,59 @@
     </div>
 </div>
 
+<section class="p-4" style="background: #e0b454;">
+    <div class="container">
+        <div class="row  g-4">
+            <div class="col-md-6 ">
+                <div class="p-4">
+                    <h2>Trading Demo Account</h2>
+                <p>Try our well-equipped demo trading platform with $50,000 in virtual funds:</p>
+
+                <h3>Demo Account Features</h3>
+                <ul>
+                    <li>
+                        <h5>Trade with no risk</h5>
+                        <p>Use our risk-free environment to hone your skills and improve your trading strategies.</p>
+                    </li>
+                    <li>
+                        <h5>Access the global markets</h5>
+                        <p>Trade our 80+ FX pairs, stock CFDs, indices, commodities, and more using customizable charts, drawing tools, and indicators.</p>
+                    </li>
+                    <li>
+                        <h5>Real-time pricing</h5>
+                        <p>Experience the live markets with our superior execution and reliability on web and mobile.</p>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form action="{{ route('demo_account') }}" method="POST" class="p-4 bg-white rounded" id="form_demo_account">
+                    @csrf
+                    <h2>Open a Demo Account</h2>
+                <p>Username and password will be sent to this e-mail</p>
+                <div class="form-group">
+                    <label for="name01">Full Name</label>
+                    <input type="text" class="form-control" id="name01" name="name" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                </div>
+                {{-- phone --}}
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    {{-- message --}}
+                    <div class="response_message"></div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 <section class="bg-white p-4">
     <div class="container">
@@ -83,3 +136,32 @@
         </div>
     </div>
 </section>
+
+@section('scripts')
+    <script>
+        $(function () {
+            $('#form_demo_account').on('submit', function (e) {
+                e.preventDefault();
+                var form = $(this);
+                $.ajax({
+                    type: 'POST',
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function (data) {
+                        
+                    }, error: function (data) {
+                        $(".response_message").html(data.responseJSON.message).hide().fadeIn(500);
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        .response_message{
+            display: none;
+        font-size: 18px;
+        margin-top: 12px;
+        color: #d75454;
+        }
+    </style>
+@endsection
