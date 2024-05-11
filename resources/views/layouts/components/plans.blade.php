@@ -1,231 +1,556 @@
-<!-- 
+<div id="app" class="gb-scope hosting-app">
+    <div><!----> <!---->
+        <div class="vps-landing">
+            <div class="scrollspy-container">
+                <div class="gb-container">
+                    <div id="server-management" class="scrollspy-anchor">
+                        <section id="management" class="server-management-desc scrollspy-anchor">
 
-INSTRUCTIONS:
-- Using html and css, create the design we shared with you on Figma.
+                          <div class="gb-headline"><h2 class="gb-headline__title">Ready To <span style="color: #b0843a;">Open Account?</span></h2> <!----> <p>
+                            Simply select your preferred type of management during the start trading.
+                          </p> </div>
 
-WHAT WE EXPECT FROM YOU:
-- Your code should be scalable and maintainable.
-- Your code should be component-based.
-- Your code should support all modern browsers.
-- You are completely free to use the new css features.
--->
+                            <div class="server-management-desc__table-holder">
+                                @php
+                                    $plans = App\Plan::all();
+                                    $icons = ['planItem--free', '', 'planItem--pro', 'planItem--entp'];
+                                    $class = ['symbol symbol--rounded', 'symbol', 'symbol', ''];
+                                    $btn = ['', 'button--pink', 'button--pink', 'button--white'];
+                                @endphp
+                                <table class="gb-table server-management-desc__table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            @foreach ($plans as $p)
+                                                <th>
+                                                    <p class="server-management-desc__title">
+                                                        {{ $p->name }}
+                                                    </p>
+                                                    @if ($p->price == 0)
+                                                    @else
+                                                        {{ $p->price }}$
+                                                    @endif
 
-<!-- YOUR HTML STARTS HERE -->
+                                                </th>
+                                            @endforeach
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
-<section class="plans__container">
-    <div class="plans">
-      <div class="plansHero">
-        <h2 class="plansHero__title">Our customers are the cornerstone of our business, and their satisfaction is our priority.</h2>
-      </div>
-      <div class="planItem__container">
-        @php
-            $plans = App\Plan::all();
-            $icons = ['planItem--free','','planItem--pro','planItem--entp'];
-            $class = ['symbol symbol--rounded','symbol','symbol',''];
-            $btn = ['','button--pink','button--pink','button--white'];
-        @endphp
+                                        @php
+                                            $array = [
+                                                'Feature',
+                                                'Minimum Opening Balance',
+                                                'Spreads From',
+                                                'Commission',
+                                                'Swaps',
+                                                'Instruments',
+                                                'Maximum Leverage',
+                                                'Execution',
+                                                'Minimum Trade Size'
+                                            ];
+                                        @endphp
 
-        @foreach ($plans as $index => $p)
-            
-        <div class="planItem {{$icons[$index]}}">
-  
-            <div class="card">
-              <div class="card__header">
-                @if ($icons[$index] == '')
-                  <img src="{{ asset('img/triangle.png') }}" width="42px" />
-                @else
-                <div class="card__icon {{$class[$index]}}"></div>
-                @endif
-                
-                <h2>{{ $p->name }}</h2>
-              </div>
-              {{-- <div class="card__desc">
-                {{ $p->desc }}
-              </div> --}}
-            </div>
-    
-            {{-- <div class="price">
-              @if ($p->price != '')
-              ${{ $p->price }}
-              @endif
-              </div> --}}
 
-              <div style="height: 30px;"></div>
-    
-            <ul class="featureList">
-                @foreach ($p->infos as $i)
-                <li>
-                    <div class="d-flex w-100 justify-content-between">
-                        <div>{{$i->name}}</div>
-                        <div>{{$i->desc}}</div>
+
+                                        @foreach ($array as $name_array)
+                                            <tr>
+                                                <th>
+                                                    {{ $name_array }}
+                                                </th>
+                                                @foreach ($plans as $p)
+                                                    <td>
+                                                        @php
+                                                            $desc = 1;
+                                                        @endphp
+                                                        @foreach ($p->infos as $info)
+                                                            @if ($info->name == $name_array)
+                                                                @php
+                                                                    $desc = 0;
+                                                                @endphp
+                                                                <p>{{ $info->desc }}</p>
+                                                            @endif
+                                                        @endforeach
+
+                                                        @if ($desc == 1)
+                                                        <span class="icon-hyphen"></span>
+                                                        @endif
+                                                    </td>
+
+                                                @endforeach
+                                            </tr>
+                                        @endforeach
+
+
+
+                                    </tbody>
+                                    <tbody>
+                                      {{-- <tr>
+                                        <td></td>
+                                        @foreach ($plans as $p)
+                                          <td>
+                                            <a href="/page/try-demo" class="btn-out01 btn-out02">Start Trading</a>
+                                          </td>
+                                        @endforeach
+                                      </tr> --}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
                     </div>
-                </li>
-                @endforeach
-              
-              
-            </ul>
-    
-            <a href="/page/try-demo">
-              <button class="button {{$btn[$index]}}">Get Started</button>
-            </a>
-          </div>
-        @endforeach
-
-        <!--free plan ends -->
-  
-        {{-- <!--pro plan starts -->
-        <div class="planItem planItem--pro">
-          <div class="card">
-            <div class="card__header">
-              <div class="card__icon symbol"></div>
-              <h2>Pro</h2>
-              <div class="card__label label">Best Value</div>
+                </div>
             </div>
-            <div class="card__desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</div>
-          </div>
-  
-          <div class="price">$18<span>/ month</span></div>
-  
-          <ul class="featureList">
-            <li>2 links</li>
-            <li>Own analytics platform</li>
-            <li>Chat support</li>
-            <li class="disabled">Mobile application</li>
-            <li class="disabled">Unlimited users</li>
-          </ul>
-  
-          <button class="button button--pink">Get Started</button>
         </div>
-        <!--pro plan ends -->
-  
-        <!--entp plan starts -->
-        <div class="planItem planItem--entp">
-          <div class="card">
-            <div class="card__header">
-              <div class="card__icon"></div>
-              <h2>Enterprise</h2>
-            </div>
-            <div class="card__desc">Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</div>
-          </div>
-  
-          <div class="price">Let's Talk</div>
-  
-          <ul class="featureList">
-            <li>2 links</li>
-            <li>Own analytics platform</li>
-            <li>Chat support</li>
-            <li>Mobile application</li>
-            <li>Unlimited users</li>
-            <li>Customize Panel</li>
-          </ul>
-  
-          <button class="button button--white">Get Started</button>
-        </div>
-        <!--entp plan ends --> --}}
-  
-      </div>
-
-      
-      
-
     </div>
-    <div
-        class="container mt-5"
-      >
-        <div
-          class="row justify-content-center align-items-center g-4"
-        >
-          <div class="col">
-              <h3 class="text-center">Begin by following three simple steps</h3>
-              <ul class="mt-4 text-black ulliststyle">
-                <li>Provide your info: Share your information.</li>
-                <li>Fund your account: Make a deposit via bank transfer, wire transfer, or direct bank payment.</li>
-                <li>Start trading: Upon approval, the account will become accessible.</li>
-              </ul>
-          </div>
-        </div>
-        
-      </div>
-  </section>
+</div>
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-    :root {
-  --baseColor: #656c7c;
-  --baseSize: 16px;
-  --baseLineHeight: 1.5;
-  --fontFamily: Inter, sans-serif;
-  --pink: #dbaf52;
-  --pinkLight: #ffecf0;
-  --blue: #f1be52;
+<style>
+    .gb-scope .gb-icon {
+        font: normal normal normal 14px/1 gb-icon-font;
+        font-size: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: auto;
+        speak: none;
+        font-family: gb-icon;
+    }
 
-  --redTick: url("data:image/svg+xml,%3Csvg width='18' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.552.134 5.717 10.97 1.448 6.701 0 8.149l5.717 5.717L18 1.583 16.552.134Z' fill='%23EA455F'/%3E%3C/svg%3E%0A");
+    .gb-scope .gb-icon-tick:before {
+        content: "\EAC8";
+    }
 
-  --whiteTick: url("data:image/svg+xml,%3Csvg width='18' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.552.134 5.717 10.97 1.448 6.701 0 8.149l5.717 5.717L18 1.583 16.552.134Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+    .gb-scope {
+        font-family: GB Museo Sans, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
 
-  --close: url("data:image/svg+xml,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 1.414 16.586 0 9 7.586 1.414 0 0 1.414 7.586 9 0 16.586 1.414 18 9 10.414 16.586 18 18 16.586 10.414 9 18 1.414Z' fill='%23B1B8C9'/%3E%3C/svg%3E");
+    .gb-scope,
+    .gb-scope *,
+    .gb-scope :after,
+    .gb-scope :before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 
-  --entpIcon: url("data:image/svg+xml,%3Csvg width='42' height='42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.813 11.077 21 1.155l17.187 9.922v19.846L21 40.845 3.813 30.923V11.077Z' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='21' cy='21' r='8' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
-}
-.plans{width:96%;max-width:1128px;margin:0 auto;}
-.plans__container{padding:1rem 0 2rem;}
-.plansHero{text-align:center;padding:5rem 0 4.5rem;line-height:1.21;}
-.plansHero__title{font-weight:700;font-size:2rem;margin:0 0 1rem 0;color:#000;}
-.plansHero__subtitle{margin:0;}
-.planItem{--border:1px solid #e6e6e6;--bgColor:#fff;--boxShadow:none;background-color:var(--bgColor);border:var(--border);border-radius:1rem;box-shadow:var(--boxShadow);padding:2rem 0.6rem;display:inline-flex;flex-direction:column;}
-.planItem__container{--direction:column;display:grid;grid-auto-flow:var(--direction);grid-auto-columns:1fr;gap:1.5rem;}
-.planItem .price{--priceMargin:2rem 0;}
-.planItem--pro{--border:0;--boxShadow:0px 14px 30px rgba(204, 204, 204, 0.32);}
-.planItem--pro .label{--labelBg:#fdb72e;--labelColor:#fff;}
-.planItem--entp{--bgColor:var(--blue);}
-.planItem--entp .card{--titleColor:#fff;--descColor:rgb(255 255 255 / 80%); background: #f1be52;}
-.planItem--entp .card__icon{background-image:var(--entpIcon);background-size:cover;}
-.planItem--entp .price,.planItem--entp .featureList{--color:#fff;}
-.planItem--entp .featureList{--icon:var(--whiteTick);}
-.planItem .button{margin-top:auto;}
-.button{--bgColor: #c295443d;
-    --color: #d7ad50;
-    --shadowColor: rgb(224 180 84 / 23%);
-    --outline: #f0e6d2;
-    border-radius: 0.5rem;
-    display: block;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border: 0;
-    line-height: inherit;
-    font-family: inherit;
-    font-size: 1rem;
+    .gb-scope p {
+        margin: 0 0 1.5em;
+    }
+
+    .gb-scope button {
+        margin: 0;
+        font-family: GB Museo Sans, Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .gb-scope button {
+        text-transform: none;
+        overflow: visible;
+    }
+
+    .gb-scope button {
+        -webkit-appearance: button;
+    }
+
+    .gb-scope .gb-container {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .gb-scope {
+        color: #6d6e70;
+    }
+
+    section {
+        display: block;
+    }
+
+    button {
+        color: inherit;
+        font: inherit;
+        margin: 0;
+    }
+
+    button {
+        overflow: visible;
+    }
+
+    button {
+        text-transform: none;
+    }
+
+    button {
+        -webkit-appearance: button;
+        cursor: pointer;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    td,
+    th {
+        padding: 0;
+    }
+
+
+    .hosting-app .gb-btn {
+        display: inline-block;
+        height: 38px;
+        padding: 0 16px;
+        border: 1px solid;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 36px;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        border-color: #b8b8b8;
+        background: #fefefe -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+        background: #fefefe linear-gradient(#fefefe, #ededed);
+        color: #6d6e70;
+        text-shadow: 0 -1px 1px #ededed;
+    }
+
+    .hosting-app .gb-btn:hover {
+        text-decoration: none;
+    }
+
+    .hosting-app .gb-btn:focus {
+        border-color: #75b9f0;
+        outline: none;
+        -webkit-box-shadow: 0 0 8px #97cbf4;
+        box-shadow: 0 0 8px #97cbf4;
+    }
+
+    .hosting-app .gb-btn:not([disabled]):hover {
+        background: #ededed -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#e0e0e0));
+        background: #ededed linear-gradient(#ededed, #e0e0e0);
+    }
+
+    .hosting-app .gb-btn:not([disabled]):active {
+        background: #fefefe -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fefefe));
+        background: #fefefe linear-gradient(#ededed, #fefefe);
+    }
+
+    .hosting-app .gb-label {
+        display: inline-block;
+        padding: 5px 8px;
+        border-radius: 5px;
+        background: #6d6e70;
+        color: #fff;
+        font-size: .75rem;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .hosting-app .gb-label--warning {
+        background: #fbbc28;
+        color: #fff;
+    }
+
+    .hosting-app .gb-tooltip {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .hosting-app .gb-tooltip__toggle--icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #6d6e70;
+        color: #fff;
+        font-weight: bold;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .hosting-app .gb-tooltip__wrap {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 6px;
+        text-align: left;
+        cursor: auto;
+        z-index: 999;
+    }
+
+    .hosting-app .gb-tooltip__wrap p:last-child {
+        margin: 0;
+    }
+
+    .hosting-app .gb-tooltip__arrow {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background: #6d6e70;
+    }
+
+    .hosting-app .gb-tooltip__content {
+        display: inline-block;
+        width: 260px;
+        padding: 24px 28px;
+        border-radius: 5px;
+        background: #6d6e70;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-transform: none;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+        box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    }
+
+    .hosting-app .gb-tooltip--right .gb-tooltip__arrow {
+        left: 0;
+    }
+
+    .hosting-app .gb-tooltip--top .gb-tooltip__arrow {
+        bottom: 0;
+    }
+
+    .hosting-app .gb-tooltip--bottom .gb-tooltip__arrow {
+        top: 0;
+    }
+
+    .hosting-app .gb-table {
+        width: 100%;
+        line-height: 1.25em;
+        border-collapse: collapse;
+    }
+
+    .hosting-app .gb-table th,
+    .hosting-app .gb-table td {
+        padding: 16px 24px;
+        border: 1px solid #d6d6d6;
+    }
+
+    .hosting-app .gb-table th:first-child {
+        border-left-color: rgba(0, 0, 0, 0);
+    }
+
+    .hosting-app .gb-table th:last-child,
+    .hosting-app .gb-table td:last-child {
+        border-right-color: rgba(0, 0, 0, 0);
+    }
+
+    .hosting-app .gb-table th {
+        background: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .hosting-app .gb-table th:first-child {
+        text-align: left;
+    }
+
+    .hosting-app .gb-table td:not(:first-child) {
+        text-align: center;
+    }
+
+    .hosting-app .label {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-transform: none;
+        font-size: 1rem;
+        -webkit-transition: background-color .15s linear;
+        transition: background-color .15s linear;
+        border-radius: 10px;
+    }
+
+    .hosting-app .label:hover {
+        background-color: #9b9b9b;
+    }
+
+    .hosting-app .label.gb-label--xxs {
+        font-size: .625rem;
+        font-weight: 300;
+        padding: 2px 4px;
+        border: 1px solid #8cc1c1;
+    }
+
+    .hosting-app .gb-tooltip {
+        position: relative;
+    }
+
+    .hosting-app .gb-tooltip__toggle--icon {
+        width: 21px;
+        height: 21px;
+        line-height: 21px;
+        font-weight: 500;
+        font-size: .95rem;
+    }
+
+    .hosting-app .gb-tooltip__content,
+    .hosting-app .gb-tooltip__arrow {
+        background-color: #6d6e70;
+    }
+
+    .hosting-app .gb-tooltip__content {
+        font-weight: 300;
+    }
+
+    .hosting-app .server-management-desc__table-holder {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .server-management-desc__table-holder{
+        background: #f3f3f3;
+    border-radius: 10px;
+    padding-right: 14px;
+    }
+
+    .hosting-app .server-management-desc__table {
+        margin-top: 16px;
+    }
+
+    .hosting-app .server-management-desc__table--expandable {
+        margin-top: 0;
+    }
+
+    .hosting-app .server-management-desc__title {
+        font-size: 1rem;
+        color: #6d6e70;
+        margin-bottom: 8px;
+    }
+
+    .hosting-app .server-management-desc__label {
+        position: relative;
+        bottom: 9px;
+    }
+
+    .hosting-app .server-management-desc__toggle-details {
+        text-transform: capitalize;
+        font-size: 1.25rem;
+        background: #f2f2f2;
+        line-height: 41px;
+        color: #a0a1a3;
+        border: 0;
+        height: 41px;
+        margin-top: 16px;
+        font-weight: 500;
+        min-width: 160px;
+    }
+
+    .hosting-app .server-management-desc__toggle-details:not([disabled]):hover {
+        background: #f2f2f2;
+    }
+
+    .hosting-app .server-management-desc__toggle-details:focus {
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .hosting-app .server-management-desc thead th {
+        padding-bottom: 24px;
+        text-align: center;
+    }
+
+    .hosting-app .server-management-desc th,
+    .hosting-app .server-management-desc td {
+        border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d6d6d6 rgba(0, 0, 0, 0);
+        font-size: 1.25rem;
+        padding: 12px;
+    }
+
+    .hosting-app .server-management-desc th:last-child,
+    .hosting-app .server-management-desc td:last-child {
+        background-color: #e1e1df;
+    }
+
+    .hosting-app .server-management-desc th {
+        background-color: rgba(0, 0, 0, 0);
+        color: #4d4e4f;
+        line-height: 28px;
+    }
+
+    .hosting-app .server-management-desc th:first-child {
+        text-align: left;
+        vertical-align: top;
+        min-width: 120px;
+        max-width: 120px;
+    }
+
+    @media (min-width: 768px) {
+        .hosting-app .server-management-desc th:first-child {
+            min-width: 350px;
+            width: 400px;
+            max-width: none;
+        }
+    }
+
+    .hosting-app .server-management-desc th:last-child {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .hosting-app .server-management-desc td {
+        min-width: 230px;
+        width: 245px;
+        font-weight: 500;
+    }
+
+    .hosting-app .server-management-desc td p {
+      font-size: 13px;
     font-weight: 600;
-    background-color: var(--bgColor);
-    color: var(--color);
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;}
-.button--pink{--bgColor:var(--pink);--color:#fff;--shadowColor:rgb(234 76 137 / 50%);}
-.button--white{--bgColor:#fff;--shadowColor:rgb(255 255 255 / 30%);--outline:#fff;}
-.button:hover{transform:translateY(-2px);box-shadow:0px 6px 10px var(--shadowColor);}
-.card{--titleColor:#000;--descColor:var(--baseColor);}
-.card__header{display:flex;gap:1rem;align-items:center;}
-.card__icon{width:2.625rem;height:2.625rem;}
-.card h2{color:var(--titleColor);font-size:1.5rem;line-height:1.2;font-weight:400;margin:0;flex-grow:1;}
-.card__desc{margin:1.5rem 0 0;color:var(--descColor);}
-.label{--labelColor:var(--baseColor);--labelBg:#e5e5e5;font-weight:600;line-height:1.25;font-size:1rem;text-align:center;padding:0.625rem 1.125rem;border-radius:2rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:var(--labelBg);color:var(--labelColor);}
-.price{--color:#000;--priceMargin:0;display:flex;color:var(--color);align-items:center;gap:0.5625rem;font-weight:600;font-size:2rem;margin:var(--priceMargin);}
-.price span{font-size:1rem;font-weight:400;color:var(--baseColor);}
-.featureList{--color:#000;--icon:var(--redTick);--height:0.875rem;margin:0 0 2.75rem;padding:0;font-weight:500;}
-.featureList li{color:var(--color);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;}
+    margin: 0 auto;
+    color: #684a0a;
+    }
 
-.featureList li:last-child{margin-bottom:0;}
-.featureList li.disabled{--color:#b1b8c9;--height:1.125rem;--icon:var(--close);}
-.symbol{--big:2.625rem;--small:1.5rem;--radius:0.25rem;border:2px solid var(--blue);width:var(--big);height:var(--big);border-radius:var(--radius);position:relative;}
-.symbol--rounded{--radius:2rem;}
-.symbol:after{content:"";box-sizing:border-box;display:block;position:absolute;border:2px solid var(--pink);width:var(--small);height:var(--small);border-radius:var(--radius);top:50%;left:50%;transform:translate(-50%, -50%);}
-@media screen and (max-width: 640px){
-.plans{max-width:480px;width:90%;}
-.planItem__container{--direction:row;}
+    .hosting-app .server-management-desc .gb-icon {
+        color: #8cc1c1;
+    }
+
+    .hosting-app .server-management-desc .icon-hyphen {
+        display: inline-block;
+        height: 2px;
+        width: 16px;
+        background-color: #9b9b9b;
+        margin: 12px 0;
+    }
+
+
+.gb-scope *,.gb-scope :after,.gb-scope :before{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.gb-scope p{margin:0 0 1.5em;}
+.gb-scope h2{margin:0 0 1em;font-weight:700;line-height:inherit;}
+.gb-scope h2{font-size:1.5rem;}
+
+
+.hosting-app .gb-headline{padding:64px 0 48px;line-height:1.33;text-align:center;}
+@media (min-width: 768px){
+.hosting-app .gb-headline{font-size:1.125rem;}
 }
-  </style>
+.hosting-app .gb-headline__title{margin:0;font-size:1.5rem;line-height:1.125;}
+@media (min-width: 480px){
+.hosting-app .gb-headline__title{margin-bottom:8px;font-size:2rem;font-weight:300;}
+}
+@media (min-width: 768px){
+.hosting-app .gb-headline__title{font-size:3rem;}
+}
+.hosting-app .gb-headline p{margin:0;}
+.hosting-app .gb-headline p{margin-top:16px;}
+
+</style>

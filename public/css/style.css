@@ -4308,9 +4308,19 @@ footer {
     display: table;
     margin-top: 16px;
 }
-
+.btn-out01.btn-out02{
+    border: 2px solid #b0843a;
+    color: #b0843a;
+    display: block;
+    margin: 0px 12px;
+    font-size: 17px;
+}
 .btn-out01:hover
 {
     background-color: #fff;
     color: #000;
+}
+.btn-out01.btn-out02:hover{
+    background-color: #b0843a;
+    color: #fff;
 }
