@@ -252,7 +252,7 @@
                                     Iraq, Erbil, Dream City Main Street, Office 308.
                               </li>
                                 <li>Phone: <a href="tel:+964 750 536 45 45">+964 750 536 45 45</a></li>
-                                <li>Telephone: <a href="tel:+964 770 537 45 45">+964 770 537 45 45</a></li>
+                                <li>Phone: <a href="tel:+964 770 537 45 45">+964 770 537 45 45</a></li>
                                 <li>Email: <a
                                         href="mailto:info@mercatobrokers.com">info@mercatobrokers.com</a>
                                 </li>

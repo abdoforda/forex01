@@ -5,7 +5,7 @@
         <div class="container p-5">
             <div class="row justify-content-center align-items-center g-4">
                 <div class="col">
-                    <h1 class="text-center display-2" style="color: #08243c;">Need Help?</h1>
+                    <h1 class="text-center display-4 mb-0" style="color: #08243c;">Need Help?</h1>
                 </div>
                 <div class="col">
                     <center>
@@ -24,7 +24,7 @@
         </div>
     
     </section></div>
-    <div class="col0 col-md-4"><section style="padding: 50px;
+    <div class="col0 col-md-4"><section style="padding: 28px;
         background: #e3b24c;">
             <div class="container">
                 <center>
