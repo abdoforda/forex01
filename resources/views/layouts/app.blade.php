@@ -247,7 +247,7 @@
                         <div id="block-10" class="widget hr widget_block small">
                             <ol style="list-style: disc">
                                 <p class="mt-3"></p>
-                                <li>The Registered and Physical Office address of the Company is: Address: United Arab Emirates, Dubai, Shiekh Zayed Road, Nasima Tower, Office 306.
+                                <li>Address: United Arab Emirates, Dubai, Shiekh Zayed Road, Nasima Tower, Office 306.
 
                                     Iraq, Erbil, Dream City Main Street, Office 308.
                               </li>
