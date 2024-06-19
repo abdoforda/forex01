@@ -16,7 +16,7 @@
                                     src="{{asset('img/how_to_open_account/step1.svg')}}">
                             </div>
 
-                            <p class="steps_item-text ">Create a MyFXTM profile</p>
+                            
                         </div>
                     </label>
 
@@ -93,7 +93,7 @@
                                         data-src="/themes/custom/fxi_theme/dist/assets/icons/steps/step1-25.svg">
                                 </div>
 
-                                <p class="steps_item-text ">Create a MyFXTM profile</p>
+                                
                             </div>
                         </div>
                         <div class="steps_carousel-item carousel-item">
